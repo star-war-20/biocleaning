@@ -1,0 +1,237 @@
+<!doctype html>
+
+<html class="no-js" lang="zxx">
+
+<?php $brushup_redux_demo = get_option('redux_demo'); ?>
+
+    <head>
+
+		<meta name="google-site-verification" content="y_xqTtG2rwrhBugM077cxpqNpj9iEvfmhAHh_c9YEF8" />
+		
+    <meta charset="utf-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
+
+    <?php if(isset($brushup_redux_demo['favicon']['url'])){?>
+
+    <link rel="shortcut icon" href="<?php echo esc_url($brushup_redux_demo['favicon']['url']); ?>">
+
+    <?php }?>
+
+    <?php }?>
+
+    <?php wp_head(); ?>
+
+    </head>
+
+    <body id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+        <!-- header-start -->
+
+        <header>
+
+            <div id="sticky-header" class="main-menu-area">
+
+                <div class="container">
+
+                    <div class="row align-items-center">
+
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-8">
+
+                            <div class="logo ">
+								<a href="<?php echo esc_url(home_url('/')); ?>">
+<img src="https://dublcheckcleaningglasgow.co.uk/wp-content/uploads/2024/02/croppedvcnvnnvnv-1.webp" alt="Logo">
+</a>
+
+<!-- 									<a href="<?php echo esc_url(home_url('/')); ?>">
+										<?php 
+										/* Toggle this block if you want to use the Redux logo again
+										if(isset($brushup_redux_demo['logo']['url']) && $brushup_redux_demo['logo']['url'] != '') { ?>
+											<img src="<?php echo esc_url($brushup_redux_demo['logo']['url']); ?>" alt="Logo">
+										<?php } else { ?>
+										*/ 
+										?>
+
+											<img src="https://dublcheckcleaningglasgow.co.uk/wp-content/uploads/2024/02/croppedvcnvnnvnv-1.webp" alt="Logo">
+
+										<?php // } ?>
+									</a> -->
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-9 col-lg-9 d-none d-xl-block d-lg-block">
+
+                            <div class="row">
+
+                                <div class="col-xl-12 d-none d-lg-block">
+
+                                    <div class="header-top mt-15">
+
+                                        <div class="header-top-wrapper">
+
+                                            <div class="header-top-icon f-left">
+
+                                                <i class="far fa-alarm-clock"></i>
+
+                                            </div>
+
+                                            <div class="header-top-text">
+
+                                                <span><?php echo esc_attr($brushup_redux_demo['time']);?></span>
+
+                                                <h5><?php echo esc_attr($brushup_redux_demo['time_info']);?></h5>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="header-top-wrapper ">
+
+                                            <div class="header-top-icon f-left">
+
+                                                <i class="fal fa-map-marker-alt"></i>
+
+                                            </div>
+
+                                            <div class="header-top-text">
+
+                                                <span><?php echo esc_attr($brushup_redux_demo['header_address']);?></span>
+
+                                                <h5><?php echo esc_attr($brushup_redux_demo['header_address_info']);?></h5>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="header-top-wrapper headers-wrapper">
+
+                                            <div class="header-top-icon f-left">
+
+                                                <i class="far fa-phone"></i>
+
+                                            </div>
+
+                                            <div class="header-top-text">
+
+                                                <span><?php echo esc_attr($brushup_redux_demo['header_call_us']);?></span>
+
+                                                <h5><?php echo esc_attr($brushup_redux_demo['header_phone']);?></h5>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="menu-box">
+
+                                <div class="menu-bar info-bar f-right d-none d-md-none d-lg-block">
+
+                                    <a href="#"><i class="fal fa-bars"></i></a>
+
+                                </div>
+
+                                <div class="main-menu">
+
+                                    <nav id="mobile-menu">
+
+                                        <?php 
+
+                                          wp_nav_menu( 
+
+                                          array( 
+
+                                                'theme_location' => 'primary',
+
+                                                'container' => '',
+
+                                                'menu_class' => '', 
+
+                                                'menu_id' => '',
+
+                                                'menu'            => '',
+
+                                                'container_class' => '',
+
+                                                'container_id'    => '',
+
+                                                'echo'            => true,
+
+                                                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+
+                                                'walker'            => new Brushup_Wp_Bootstrap_Navwalker(),
+
+                                                'before'          => '',
+
+                                                'after'           => '',
+
+                                                'link_before'     => '',
+
+                                                'link_after'      => '',
+
+                                                'items_wrap'      => '<ul  class=" %2$s">%3$s</ul>',
+
+                                                'depth'           => 0,        
+
+                                            )
+
+                                        ); ?>
+
+                                    </nav>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-8 col-4 d-block d-xl-none d-lg-none text-right">
+
+                            <div class="open-mobile-menu">
+                                <a href="javascript:void(0);">
+                                    <i class="far fa-bars"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <?php if ( is_active_sidebar( 'header-area-1' ) ) : ?>
+                <?php dynamic_sidebar( 'header-area-1' ); ?>
+            <?php endif; ?>
+
+        </header>
+
+        <!-- header-start -->
+
+        <!--    Slide Bar Start   -->
+        <aside class="slide-bar">
+            <div class="close-mobile-menu">
+                <a href="javascript:void(0);"><i class="fas fa-times"></i></a>
+            </div>
+            <nav class="side-mobile-menu">
+                <?php brushup_mobile_menu(); ?>
+            </nav>
+        </aside>
+        <div class="body-overlay"></div>
+        <!--    Slide Bar End    -->
+
+
+

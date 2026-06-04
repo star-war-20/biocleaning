@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers | Shades of Emerald Eco Limited</title>
+    <meta name="description"
+        content="Join Shades of Emerald Eco Limited. We are looking for reliable and hardworking individuals to join our growing team." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D1F52", // Deep Midnight Navy
+                        "primary-dark": "#081436",
+                        secondary: "#1E3A8A", // Complementary Navy
+                        accent: "#10B981", // Brand Emerald Green
+                        emerald: "#10B981", // Brand Emerald Green
+                        dark: "#0D1F52",
+                        light: "#F8FAFC",
+                    },
+                    fontFamily: {
+                        sans: ["Outfit", "sans-serif"],
+                        heading: ["Outfit", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+    
+    <style>
+        .dot-pattern {
+            background-image: radial-gradient(#10B981 20%, transparent 20%);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-dark bg-white antialiased">
+    <!-- Topbar -->
+      <div class="bg-primary text-white text-sm py-2 hidden md:block">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-envelope mr-2"></i> chima.elendu28@gmail.com</span>
+             
+            </div>
+               <span><i class="fas fa-clock mr-2"></i> Mon - Sat: 8:00 AM - 6:00
+                    PM</span>
+           
+        </div>
+    </div>
+    <!-- Header / Navbar -->
+  <header id="header" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md top-0 md:top-[36px]">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+               <img src="assets/logobio.jpeg"  style="height:80px"/>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="text-primary transition">Home</a>
+                <a href="about.html" class="hover:text-emerald transition">About</a>
+                <div class="relative group flex items-center">
+                <a href="services.html" class="hover:text-emerald transition flex items-center gap-1 ">
+                    Services <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="absolute left-0 top-full w-64 bg-transparent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-2 overflow-hidden">
+                        <a href="service-biohazard.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Biohazard & Trauma Cleaning</a>
+                        <a href="service-domestic-commercial.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Domestic & Commercial Cleaning</a>
+                        <a href="service-infection-control.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Pathogen & Infection Control</a>
+                        <a href="service-eco-manufacturing.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Eco-Friendly Manufacturing</a>
+                        <a href="service-restoration.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Environmental & Restoration</a>
+                    </div>
+                </div>
+            </div>
+                <a href="gallery.html" class="hover:text-emerald transition">Gallery</a>
+                <a href="blog.html" class="hover:text-emerald transition">Blog</a>
+                <a href="careers.html" class="hover:text-emerald transition">Careers</a>
+                <a href="contact.html" class="hover:text-emerald transition">Contact</a>
+            </nav>
+
+            <!-- CTA / Contact -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="tel:+447424233154" class="flex items-center space-x-2">
+                    <i class="fas fa-phone-alt text-primary text-xl"></i>
+                    <div>
+                        <p class="text-sm font-bold text-gray-900">Call Us Any Time</p>
+                        <a href="tel:+447424233154" class="font-bold">07424233154</a>
+                    </div>
+                </a>
+                <a href="contact.html"
+                    class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition shadow-lg shadow-primary/30">
+                    Get a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-dark text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute w-full shadow-lg border-t border-gray-100">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-primary font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">About</a>
+                <a href="services.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Services</a>
+                <a href="gallery.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Gallery</a>
+                <a href="blog.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Blog</a>
+                <a href="careers.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Careers</a>
+                <a href="contact.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Contact</a>
+                <a href="contact.html"
+                    class="block mt-4 w-full text-center bg-primary text-white px-6 py-3 rounded-full font-semibold">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32">
+        
+        <!-- Hero Section (Split Layout) -->
+        <section class="relative bg-primary pt-24 pb-12 overflow-hidden lg:pt-32 lg:pb-24">
+            <div class="container mx-auto px-6 lg:px-12 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- Left Text Content -->
+                    <div class="text-left space-y-8">
+                        <div class="inline-block px-4 py-2 bg-emerald/10 border border-emerald/20 rounded-full text-emerald font-bold tracking-widest text-xs uppercase mb-2">
+                            Join Shades of Emerald Eco Limited
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-heading font-black text-white leading-[1.1] tracking-tight">
+                            We're Actively <br/><span class="text-emerald">Hiring</span>
+                        </h1>
+                        <p class="text-white/80 text-xl max-w-lg leading-relaxed font-light">
+                            Grow your career with a supportive and professional cleaning team. We offer permanent positions, stability, and opportunities for growth.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row items-center gap-6 pt-4">
+                            <a href="#form" class="w-full sm:w-auto inline-flex items-center justify-center bg-emerald hover:bg-emerald/90 text-white font-bold py-4 px-8 rounded-full transition-all shadow-xl shadow-emerald/30 text-lg">
+                                Apply Now <i class="fas fa-arrow-down ml-3"></i>
+                            </a>
+                            <div class="flex items-center gap-4 text-white">
+                                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-emerald">
+                                    <i class="fas fa-comment-dots text-xl"></i>
+                                </div>
+                                <div>
+                                    <a href="contact.html" class="font-bold hover:text-emerald transition text-lg">Get A Quote</a>
+                                    <p class="text-white/60 text-sm">Clear Costs, No Strings Attached.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual Image -->
+                    <div class="relative h-[400px] lg:h-[550px] w-full hidden md:block">
+                        <div class="absolute inset-0 dot-pattern opacity-30 rounded-3xl z-0 transform translate-x-8 translate-y-8"></div>
+                        <img src="assets/6.jpg" alt="Cleaning Team" class="absolute inset-0 w-full h-full object-cover rounded-3xl shadow-2xl z-10 border-4 border-primary-dark">
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 z-20 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4 border border-gray-100">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+                                <i class="fas fa-shield-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-black text-dark text-lg">Permanent & Stable</h4>
+                                <p class="text-gray-500 text-sm">Full-time opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Positions Section -->
+        <section class="py-24 bg-gray-50 relative" id="open-positions">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <span class="text-emerald font-bold tracking-widest text-xs uppercase block mb-3">Current Openings</span>
+                    <h2 class="text-4xl md:text-5xl font-heading font-black text-primary leading-tight">Join Our Professional Team</h2>
+                    <p class="text-gray-500 mt-4 text-lg">We are actively recruiting for the roles below. If you're passionate about high-quality service, we'd love to hear from you.</p>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Job 1: Cleaning Operative -->
+                    <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl hover:shadow-emerald/10 transition-all duration-500 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-emerald/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8 border-b border-gray-100 pb-8">
+                                <div>
+                                    <span class="text-emerald font-bold tracking-widest text-xs uppercase mb-2 block">Employment Advertisement</span>
+                                    <h3 class="text-3xl font-heading font-black text-primary">Cleaning Operative</h3>
+                                    <p class="text-gray-500 mt-2 font-medium max-w-2xl">We are currently looking for a reliable and hardworking Cleaning Operatives to join our growing team on a permanent full-time basis.</p>
+                                </div>
+                                <div class="shrink-0 flex items-center justify-center bg-emerald/10 text-emerald w-16 h-16 rounded-2xl">
+                                    <i class="fas fa-broom text-2xl"></i>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                                <!-- Left Column: Position Details & What We Offer -->
+                                <div class="lg:col-span-4 space-y-8">
+                                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                                        <h4 class="text-primary font-black text-lg mb-4 flex items-center"><i class="fas fa-info-circle text-emerald mr-2"></i> Position Details</h4>
+                                        <ul class="space-y-3 text-sm text-gray-600">
+                                            <li class="flex justify-between border-b border-gray-200 pb-2"><strong class="text-gray-900">Job Title:</strong> <span>Cleaning Operative</span></li>
+                                            <li class="flex justify-between border-b border-gray-200 pb-2"><strong class="text-gray-900">Type:</strong> <span>Permanent</span></li>
+                                            <li class="flex justify-between border-b border-gray-200 pb-2"><strong class="text-gray-900">Hours:</strong> <span class="text-right">Mon-Fri, 9am–5:30pm</span></li>
+                                            <li class="flex justify-between border-b border-gray-200 pb-2"><strong class="text-gray-900">Location:</strong> <span>Birmingham</span></li>
+                                            <li class="flex justify-between pt-1"><strong class="text-primary text-base">Salary:</strong> <span class="text-emerald font-bold text-base">£12.50/hr</span></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div>
+                                        <h4 class="text-primary font-black text-lg mb-4 flex items-center"><i class="fas fa-gift text-emerald mr-2"></i> What We Offer</h4>
+                                        <ul class="space-y-2 text-gray-600 text-sm">
+                                            <li class="flex items-start"><i class="fas fa-star text-emerald mt-1 mr-3 text-xs"></i>Permanent and stable employment</li>
+                                            <li class="flex items-start"><i class="fas fa-star text-emerald mt-1 mr-3 text-xs"></i>Supportive working environment</li>
+                                            <li class="flex items-start"><i class="fas fa-star text-emerald mt-1 mr-3 text-xs"></i>Opportunities for growth within the company</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column: Responsibilities & Requirements -->
+                                <div class="lg:col-span-8 space-y-8">
+                                    <div>
+                                        <h4 class="text-primary font-black text-lg mb-4">Responsibilities</h4>
+                                        <ul class="space-y-2 text-gray-600 grid sm:grid-cols-2 gap-x-4">
+                                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald mt-1 mr-3"></i><span>Carry out general cleaning duties to a high standard</span></li>
+                                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald mt-1 mr-3"></i><span>Maintain cleanliness and hygiene in all assigned areas</span></li>
+                                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald mt-1 mr-3"></i><span>Safely use cleaning products and equipment</span></li>
+                                            <li class="flex items-start"><i class="fas fa-check-circle text-emerald mt-1 mr-3"></i><span>Dispose of waste responsibly</span></li>
+                                            <li class="flex items-start sm:col-span-2"><i class="fas fa-check-circle text-emerald mt-1 mr-3"></i><span>Report maintenance or health & safety concerns when necessary</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="text-primary font-black text-lg mb-4">Requirements</h4>
+                                        <ul class="space-y-2 text-gray-600 grid sm:grid-cols-2 gap-x-4">
+                                            <li class="flex items-start"><i class="fas fa-angle-right text-primary mt-1 mr-3 font-bold"></i><span>Previous cleaning experience is preferred but not essential</span></li>
+                                            <li class="flex items-start"><i class="fas fa-angle-right text-primary mt-1 mr-3 font-bold"></i><span>Good attention to detail</span></li>
+                                            <li class="flex items-start"><i class="fas fa-angle-right text-primary mt-1 mr-3 font-bold"></i><span>Reliable, punctual, and professional attitude</span></li>
+                                            <li class="flex items-start"><i class="fas fa-angle-right text-primary mt-1 mr-3 font-bold"></i><span>Ability to work independently and as part of a team</span></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center gap-6 justify-between">
+                                        <p class="text-gray-500 text-sm">To apply, please send your CV and contact details to:<br><a href="mailto:chima.elendu28@gmail.com" class="text-emerald font-bold hover:text-primary transition text-base">chima.elendu28@gmail.com</a></p>
+                                        <a href="#form" class="w-full sm:w-auto inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg shadow-primary/20">
+                                            Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Job 2: Cleaning Supervisor -->
+                    <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8 border-b border-gray-100 pb-8">
+                                <div>
+                                    <span class="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">Employment Advertisement</span>
+                                    <h3 class="text-3xl font-heading font-black text-primary">Cleaning Supervisor</h3>
+                                    <p class="text-gray-500 mt-2 font-medium max-w-2xl">We are seeking an experienced and motivated Cleaning Supervisor to oversee daily cleaning operations and support our team.</p>
+                                </div>
+                                <div class="shrink-0 flex items-center justify-center bg-primary/10 text-primary w-16 h-16 rounded-2xl">
+                                    <i class="fas fa-clipboard-check text-2xl"></i>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                                <!-- Left Column: Position Details & What We Offer -->
+                                <div class="lg:col-span-4 space-y-8">
+                                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                                        <h4 class="text-primary font-black text-lg mb-4 flex items-center"><i class="fas fa-info-circle text-emerald mr-2"></i> Position Details</h4>
+                                        <ul class="space-y-3 text-sm text-gray-600">
+                                            <li class="flex justify-between border-b border-gray-200 pb-2"><strong class="text-gray-900">Job Title:</strong> <span>Cleaning Supervisor</span></li>
+                                            <li class="flex justify-between border-b border-gray-200 pb-2"><strong class="text-gray-900">Type:</strong> <span>Permanent</span></li>
+                                            <li class="flex justify-between border-b border-gray-200 pb-2"><strong class="text-gray-900">Hours:</strong> <span class="text-right">Mon-Fri, 9am–5:30pm</span></li>
+                                            <li class="flex justify-between border-b border-gray-200 pb-2"><strong class="text-gray-900">Location:</strong> <span>Birmingham</span></li>
+                                            <li class="flex justify-between pt-1"><strong class="text-primary text-base">Salary:</strong> <span class="text-primary font-black text-base">£13.50/hr</span></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div>
+                                        <h4 class="text-primary font-black text-lg mb-4 flex items-center"><i class="fas fa-gift text-emerald mr-2"></i> What We Offer</h4>
+                                        <ul class="space-y-2 text-gray-600 text-sm">
+                                            <li class="flex items-start"><i class="fas fa-star text-emerald mt-1 mr-3 text-xs"></i>Permanent full-time position</li>
+                                            <li class="flex items-start"><i class="fas fa-star text-emerald mt-1 mr-3 text-xs"></i>Friendly and professional work environment</li>
+                                            <li class="flex items-start"><i class="fas fa-star text-emerald mt-1 mr-3 text-xs"></i>Career development opportunities</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column: Responsibilities & Requirements -->
+                                <div class="lg:col-span-8 space-y-8">
+                                    <div>
+                                        <h4 class="text-primary font-black text-lg mb-4">Responsibilities</h4>
+                                        <ul class="space-y-2 text-gray-600 grid sm:grid-cols-2 gap-x-4">
+                                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span>Supervise and coordinate cleaning staff</span></li>
+                                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span>Ensure all cleaning duties are completed to company standards</span></li>
+                                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span>Conduct inspections and maintain quality control</span></li>
+                                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span>Manage cleaning schedules and supplies</span></li>
+                                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span>Train and support team members</span></li>
+                                            <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i><span>Ensure health & safety procedures are followed at all times</span></li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="text-primary font-black text-lg mb-4">Requirements</h4>
+                                        <ul class="space-y-2 text-gray-600 grid sm:grid-cols-2 gap-x-4">
+                                            <li class="flex items-start"><i class="fas fa-angle-right text-primary mt-1 mr-3 font-bold"></i><span>Previous supervisory experience in cleaning or facilities management</span></li>
+                                            <li class="flex items-start"><i class="fas fa-angle-right text-primary mt-1 mr-3 font-bold"></i><span>Strong leadership and communication skills</span></li>
+                                            <li class="flex items-start"><i class="fas fa-angle-right text-primary mt-1 mr-3 font-bold"></i><span>Good organisational abilities</span></li>
+                                            <li class="flex items-start"><i class="fas fa-angle-right text-primary mt-1 mr-3 font-bold"></i><span>Ability to work under pressure and meet deadlines</span></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center gap-6 justify-between">
+                                        <p class="text-gray-500 text-sm">To apply, please send your CV and contact details to:<br><a href="mailto:chima.elendu28@gmail.com" class="text-emerald font-bold hover:text-primary transition text-base">chima.elendu28@gmail.com</a></p>
+                                        <a href="#form" class="w-full sm:w-auto inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-xl transition-all shadow-lg shadow-primary/20">
+                                            Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticker Banner -->
+        <div class="bg-primary-dark py-4 overflow-hidden flex whitespace-nowrap items-center border-y border-white/10">
+            <div class="animate-marquee flex gap-12 items-center pr-12">
+                <!-- Group 1 -->
+                <span class="text-white text-lg font-bold">Ready to Join Shades of Emerald Eco Limited?</span>
+                <a href="tel:07424233154" class="bg-emerald text-white font-bold px-6 py-2 rounded-full text-sm hover:bg-white hover:text-emerald transition-colors">Call Us 07424233154</a>
+                
+                <span class="text-white text-lg font-bold">Looking for a Stable Career in Cleaning?</span>
+                <a href="mailto:chima.elendu28@gmail.com" class="bg-emerald text-white font-bold px-6 py-2 rounded-full text-sm hover:bg-white hover:text-emerald transition-colors">Email Your CV</a>
+                
+                <span class="text-white text-lg font-bold">Have Questions About Working With Us?</span>
+                <a href="tel:07424233154" class="bg-emerald text-white font-bold px-6 py-2 rounded-full text-sm hover:bg-white hover:text-emerald transition-colors">Call Us 07424233154</a>
+                
+                <span class="text-white text-lg font-bold">We Offer Permanent Roles & Great Support</span>
+                <a href="#form" class="bg-emerald text-white font-bold px-6 py-2 rounded-full text-sm hover:bg-white hover:text-emerald transition-colors">Apply Today</a>
+                
+                <!-- Group 2 (Duplicated for seamless looping) -->
+                <span class="text-white text-lg font-bold">Ready to Join Shades of Emerald Eco Limited?</span>
+                <a href="tel:07424233154" class="bg-emerald text-white font-bold px-6 py-2 rounded-full text-sm hover:bg-white hover:text-emerald transition-colors">Call Us 07424233154</a>
+                
+                <span class="text-white text-lg font-bold">Looking for a Stable Career in Cleaning?</span>
+                <a href="mailto:chima.elendu28@gmail.com" class="bg-emerald text-white font-bold px-6 py-2 rounded-full text-sm hover:bg-white hover:text-emerald transition-colors">Email Your CV</a>
+                
+                <span class="text-white text-lg font-bold">Have Questions About Working With Us?</span>
+                <a href="tel:07424233154" class="bg-emerald text-white font-bold px-6 py-2 rounded-full text-sm hover:bg-white hover:text-emerald transition-colors">Call Us 07424233154</a>
+                
+                <span class="text-white text-lg font-bold">We Offer Permanent Roles & Great Support</span>
+                <a href="#form" class="bg-emerald text-white font-bold px-6 py-2 rounded-full text-sm hover:bg-white hover:text-emerald transition-colors">Apply Today</a>
+            </div>
+            
+            <style>
+                .animate-marquee {
+                    animation: marquee 45s linear infinite;
+                }
+                .animate-marquee:hover {
+                    animation-play-state: paused;
+                }
+                @keyframes marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+            </style>
+        </div>
+
+        <!-- Application Form ("JOIN OUR TEAM") -->
+        <section class="py-24 bg-white relative overflow-hidden" id="form">
+            <!-- Background Decorative Elements -->
+            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-emerald/5 rounded-full blur-3xl -mr-96 -mt-96 pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -ml-64 -mb-64 pointer-events-none"></div>
+
+            <div class="container mx-auto px-6 lg:px-12 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+                    
+                    <!-- Left: Visual & Intro -->
+                    <div class="lg:col-span-5 space-y-10">
+                        <div>
+                            <span class="text-emerald font-bold tracking-widest text-xs uppercase block mb-3">Next Steps</span>
+                            <h2 class="text-5xl md:text-6xl font-heading font-black text-primary leading-tight tracking-tight">
+                                Ready to <br>Join Us?
+                            </h2>
+                            <p class="text-gray-500 text-lg leading-relaxed mt-6">
+                                We're always looking for dedicated professionals to grow with our supportive team. Submit your details and we'll be in touch shortly.
+                            </p>
+                        </div>
+                        
+                        <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-gray-200 group">
+                            <img src="assets/4.jpg" alt="Join Team" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-white">
+                                <div class="flex items-center gap-4 mb-2">
+                                    <div class="w-10 h-10 bg-emerald rounded-full flex items-center justify-center">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="font-bold">Fast application process</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Direct -->
+                        <div class="flex items-center gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary shadow-sm">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-medium mb-0.5">Prefer to email your CV directly?</p>
+                                <a href="mailto:chima.elendu28@gmail.com" class="text-emerald font-bold hover:text-primary transition">chima.elendu28@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-[0_0_50px_rgba(0,0,0,0.05)] border border-gray-100 relative">
+                            <div class="absolute top-0 right-12 w-24 h-2 bg-emerald rounded-b-lg"></div>
+
+                            <div class="mb-10">
+                                <h3 class="text-3xl font-heading font-black text-primary">Submit Application</h3>
+                                <p class="text-gray-500 mt-2">Please fill out all required fields below.</p>
+                            </div>
+
+                            <form action="#" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label class="text-sm font-bold text-primary">First Name <span class="text-red-500">*</span></label>
+                                        <input type="text" placeholder="e.g. John" class="w-full bg-gray-50 border border-gray-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald/20 focus:border-emerald transition-all text-gray-700">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-sm font-bold text-primary">Last Name <span class="text-red-500">*</span></label>
+                                        <input type="text" placeholder="e.g. Doe" class="w-full bg-gray-50 border border-gray-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald/20 focus:border-emerald transition-all text-gray-700">
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label class="text-sm font-bold text-primary">Email Address <span class="text-red-500">*</span></label>
+                                        <input type="email" placeholder="john@example.com" class="w-full bg-gray-50 border border-gray-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald/20 focus:border-emerald transition-all text-gray-700">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-sm font-bold text-primary">Phone Number <span class="text-red-500">*</span></label>
+                                        <input type="tel" placeholder="07424233154" class="w-full bg-gray-50 border border-gray-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald/20 focus:border-emerald transition-all text-gray-700">
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-primary">Select Role <span class="text-red-500">*</span></label>
+                                    <div class="relative">
+                                        <select class="w-full bg-gray-50 border border-gray-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald/20 focus:border-emerald transition-all appearance-none text-gray-700 cursor-pointer">
+                                            <option value="" disabled selected>Please select a position...</option>
+                                            <option value="operative">Cleaning Operative (£12.50/hr)</option>
+                                            <option value="supervisor">Cleaning Supervisor (£13.50/hr)</option>
+                                            <option value="other">Other Inquiry</option>
+                                        </select>
+                                        <div class="absolute right-5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <span class="block text-sm font-bold text-primary">Upload CV/Resume</span>
+                                    <label for="cv-upload" class="block border-2 border-dashed border-gray-200 bg-gray-50 rounded-xl p-8 text-center hover:border-emerald hover:bg-emerald/5 transition-colors cursor-pointer group">
+                                        <div class="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center mx-auto mb-3 text-emerald group-hover:scale-110 transition-transform">
+                                            <i class="fas fa-cloud-upload-alt text-xl"></i>
+                                        </div>
+                                        <p class="text-gray-700 font-medium">Click to upload your file</p>
+                                        <p class="text-xs text-gray-400 mt-1">Supported formats: PDF, DOC, DOCX (Max 5MB)</p>
+                                        <input type="file" id="cv-upload" class="hidden" accept=".pdf,.doc,.docx" />
+                                    </label>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-primary">Additional Information</label>
+                                    <textarea rows="4" placeholder="Tell us a bit about your experience..." class="w-full bg-gray-50 border border-gray-200 px-5 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald/20 focus:border-emerald transition-all resize-none text-gray-700"></textarea>
+                                </div>
+
+                                <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-2 text-lg">
+                                    Submit Application <i class="fas fa-paper-plane text-sm"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-0">
+        <div class="container mx-auto px-4 lg:px-12 mb-12">
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-5">
+                        <img src="assets/logobio.jpeg" style="height:80px"/>
+                    </a>
+                    <p class="text-gray-400 text-base leading-relaxed mb-5">Top-notch eco-friendly cleaning services for
+                        homes and businesses. Quality, reliability, and care — every time.</p>
+                   <div class="flex space-x-3">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=61589912471893" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    
+    <!-- TikTok (Replaced Twitter) -->
+    <a href="https://www.tiktok.com/@user6169125055238?_r=1&_t=ZN-96XgiFCC4Qx" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/shadesofemerald.l" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <!-- Google Business Profile / GMB (Replaced LinkedIn) -->
+    <a href="#"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-google"></i>
+    </a>
+</div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Quick links</h4>
+                    <ul class="space-y-3 text-base">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Home</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-400 hover:text-emerald transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>About Us</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Services</a></li>
+                        <li><a href="gallery.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Gallery</a></li>
+                        <li><a href="careers.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Careers</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Our services</h4>
+                    <ul class="space-y-3 text-base">
+                        <li><a href="service-biohazard.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Biohazard Cleaning</a></li>
+                        <li><a href="service-domestic-commercial.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Domestic & Commercial</a>
+                        </li>
+                        <li><a href="service-infection-control.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Infection Control</a></li>
+                        <li><a href="service-eco-manufacturing.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Eco-Manufacturing</a></li>
+                        <li><a href="service-restoration.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Structural Restoration</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Contact info</h4>
+                    <ul class="space-y-4 text-base">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt text-white mt-1 mr-3"></i><span
+                                class="text-gray-400">7 Clent Road, Oldbury, West Midlands, B68 9EU</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt text-white mr-3"></i><span
+                                class="text-gray-400">07424233154</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-white mr-3"></i><span
+                                class="text-gray-400">chima.elendu28@gmail.com</span></li>
+                        <li class="flex items-center"><i class="fas fa-clock text-white mr-3"></i><span
+                                class="text-gray-400">Mon–Sat: 8:00 AM – 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 py-8 text-gray-500 text-base">
+            <div
+                class="container mx-auto px-4 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <p>&copy; 2026 Shades of Emerald Eco Limited. All Rights Reserved</p>
+                <p>Design and developed by <a href="https://kyleinfotech.co.in/" target="_blank"
+                        class="text-accent hover:text-white transition">Kyle Infotech</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

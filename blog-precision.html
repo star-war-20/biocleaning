@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Art of Clinical Precision | Shades of Emerald Eco Limited</title>
+    <meta name="description"
+        content="Discover why standard cleaning isn't enough and how clinical precision elevates hygiene standards." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D1F52", // Deep Midnight Navy
+                        "primary-dark": "#081436",
+                        secondary: "#1E3A8A", // Complementary Navy
+                        accent: "#10B981", // Brand Emerald Green
+                        emerald: "#10B981", // Brand Emerald Green
+                        dark: "#0D1F52",
+                        light: "#F8FAFC",
+                    },
+                    fontFamily: {
+                        sans: ["Outfit", "sans-serif"],
+                        heading: ["Outfit", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="font-sans text-dark bg-white antialiased">
+    <!-- Header / Navbar (Reused from index) -->
+    <header id="header" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md top-0">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="bg-primary text-white p-2 rounded-lg">
+                    <i class="fas fa-leaf text-xl text-emerald"></i>
+                </div>
+                <span class="text-2xl font-heading font-bold text-dark">Shades of <span
+                        class="text-emerald">Emerald</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html#home" class="text-primary transition hover:text-emerald">Home</a>
+                <a href="about.html" class="hover:text-emerald transition">About</a>
+                <div class="relative group flex items-center">
+                <a href="services.html" class="hover:text-emerald transition flex items-center gap-1 py-2">
+                    Services <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="absolute left-0 top-full w-64 bg-transparent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-2 overflow-hidden">
+                        <a href="service-biohazard.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Biohazard & Trauma Cleaning</a>
+                        <a href="service-domestic-commercial.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Domestic & Commercial Cleaning</a>
+                        <a href="service-infection-control.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Pathogen & Infection Control</a>
+                        <a href="service-eco-manufacturing.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Eco-Friendly Manufacturing</a>
+                        <a href="service-restoration.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Environmental & Restoration</a>
+                    </div>
+                </div>
+            </div>
+                <a href="gallery.html" class="hover:text-emerald transition">Gallery</a>
+                <a href="blog.html" class="hover:text-emerald transition text-emerald">Blog</a>
+                <a href="careers.html" class="hover:text-emerald transition">Careers</a>
+                <a href="contact.html" class="hover:text-emerald transition">Contact</a>
+            </nav>
+
+            <a href="contact.html"
+                class="hidden md:block bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition shadow-lg shadow-primary/30">
+                Get a Quote
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-32">
+        <!-- Article Header -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4 lg:px-24">
+                <div class="max-w-4xl mx-auto">
+                    <nav class="flex mb-8 text-sm font-bold tracking-widest uppercase text-gray-400">
+                        <a href="blog.html" class="hover:text-emerald transition">Blog</a>
+                        <span class="mx-3">/</span>
+                        <span class="text-emerald">Hygiene Standards</span>
+                    </nav>
+                    <h1 class="text-4xl md:text-6xl font-heading font-black text-primary leading-tight mb-8">
+                        The art of clinical precision: Why standard cleaning isn't enough
+                    </h1>
+                    <div class="flex items-center space-x-6 text-gray-500 font-medium">
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-emerald mr-2"></i>
+                            May 15, 2026
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-emerald mr-2"></i>
+                            6 min read
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <section class="py-20">
+            <div class="container mx-auto px-4 lg:px-24">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Featured Image -->
+                    <div class="rounded-[2.5rem] overflow-hidden mb-16 shadow-2xl shadow-primary/20">
+                        <img src="assets/2.jpg" alt="Clinical Precision" class="w-full h-auto object-cover">
+                    </div>
+
+                    <div class="prose prose-lg max-w-none text-gray-600 leading-relaxed space-y-8">
+                        <p class="text-xl font-medium text-dark leading-relaxed">
+                            In the world of high-end corporate environments and clinical spaces, "clean" is no longer a visual metric. It is a biological one. While traditional cleaning focuses on the removal of visible dust and debris, Shades of Emerald operates at a cellular level, ensuring that surfaces are not just pristine to the eye, but sterile to the touch.
+                        </p>
+
+                        <h2 class="text-3xl font-heading font-bold text-primary pt-8">Beyond the Surface</h2>
+                        <p>
+                            Standard cleaning protocols often rely on generic chemicals and superficial wiping techniques that can actually spread pathogens rather than eliminate them. Clinical precision requires a systematic approach, using hospital-grade disinfectants and electrostatic spraying technology that reaches into the microscopic crevices where bacteria thrive.
+                        </p>
+
+                        <div class="bg-primary/5 border-l-4 border-emerald p-10 rounded-r-3xl my-12">
+                            <p class="text-primary font-bold italic text-2xl leading-relaxed">
+                                "Hygiene is the foundation of productivity. A space that is truly clean fosters an environment where employees feel safe, valued, and focused."
+                            </p>
+                        </div>
+
+                        <h2 class="text-3xl font-heading font-bold text-primary pt-8">The Shades of Emerald Difference</h2>
+                        <p>
+                            Our method integrates environmental science with elite service. We use non-toxic, eco-friendly agents that are as powerful as industrial bleach but safe for human interaction immediately after application. This "surgical-grade" approach is what separates Shades of Emerald from generic maintenance providers.
+                        </p>
+
+                        <ul class="space-y-4 list-none p-0">
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 w-6 h-6 rounded-full bg-emerald/10 flex items-center justify-center flex-shrink-0 text-emerald">
+                                    <i class="fas fa-check text-[10px]"></i>
+                                </div>
+                                <span><strong>Microbial Mapping:</strong> Identifying high-touch zones that require specialized attention.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 w-6 h-6 rounded-full bg-emerald/10 flex items-center justify-center flex-shrink-0 text-emerald">
+                                    <i class="fas fa-check text-[10px]"></i>
+                                </div>
+                                <span><strong>Sustainable Science:</strong> Using botanically derived disinfectants with 99.99% efficacy.</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="mt-1 w-6 h-6 rounded-full bg-emerald/10 flex items-center justify-center flex-shrink-0 text-emerald">
+                                    <i class="fas fa-check text-[10px]"></i>
+                                </div>
+                                <span><strong>Certified Excellence:</strong> Protocols that exceed standard UK health and safety regulations.</span>
+                            </li>
+                        </ul>
+
+                        <p class="pt-10">
+                            As London’s most prestigious workspaces continue to evolve, the demand for precision hygiene will only grow. Shades of Emerald remains at the forefront, curating environments that are as healthy as they are beautiful.
+                        </p>
+                    </div>
+
+                    <!-- Article Footer -->
+                    <div class="mt-20 pt-10 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-8">
+                        <div class="flex items-center space-x-4">
+                            <span class="font-bold text-primary uppercase tracking-widest text-xs">Share this insight:</span>
+                            <div class="flex space-x-3">
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-primary hover:bg-emerald hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-primary hover:bg-emerald hover:text-white transition-all"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-primary hover:bg-emerald hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="inline-flex items-center text-emerald font-bold hover:text-primary transition-colors">
+                            <i class="fas fa-arrow-left mr-3"></i> Back to Blog
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Insights -->
+        <section class="py-24 bg-gray-50">
+            <div class="container mx-auto px-4 lg:px-24">
+                <h3 class="text-3xl font-heading font-black text-primary mb-12">Related Insights</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <a href="blog-luxury.html" class="group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500">
+                        <span class="text-[10px] font-black text-emerald uppercase tracking-widest mb-4 block">Ritual</span>
+                        <h4 class="text-xl font-heading font-bold text-primary group-hover:text-emerald transition-colors mb-4">Curating luxury: Maintaining high-value corporate environments</h4>
+                        <span class="text-primary font-bold text-xs border-b border-emerald pb-1">Read Article <i class="fas fa-arrow-right ml-2 text-[10px]"></i></span>
+                    </a>
+                    <a href="blog-flow.html" class="group bg-white p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500">
+                        <span class="text-[10px] font-black text-emerald uppercase tracking-widest mb-4 block">Flow</span>
+                        <h4 class="text-xl font-heading font-bold text-primary group-hover:text-emerald transition-colors mb-4">Adaptive flow: How strategic scheduling boosts workplace ROI</h4>
+                        <span class="text-primary font-bold text-xs border-b border-emerald pb-1">Read Article <i class="fas fa-arrow-right ml-2 text-[10px]"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Simplified) -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 Shades of Emerald Eco Limited. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+

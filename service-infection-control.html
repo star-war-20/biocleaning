@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pathogen & Infection Control | Shades of Emerald Eco Limited</title>
+    <meta name="description"
+        content="Advanced sanitization and infection control services using non-toxic, hospital-grade disinfectants for public and private spaces." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D1F52", // Deep Midnight Navy
+                        "primary-dark": "#081436",
+                        secondary: "#1E3A8A", // Complementary Navy
+                        accent: "#10B981", // Brand Emerald Green
+                        emerald: "#10B981", // Brand Emerald Green
+                        dark: "#0D1F52",
+                        light: "#F8FAFC",
+                    },
+                    fontFamily: {
+                        sans: ["Outfit", "sans-serif"],
+                        heading: ["Outfit", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .service-sidebar-card {
+            background: #ffffff;
+            border-radius: 2rem;
+            padding: 2rem;
+            border: 1px solid #f1f5f9;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-dark bg-white antialiased">
+    <!-- Topbar -->
+ 
+
+    <!-- Header / Navbar -->
+  <header id="header" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md top-0 md:top-[36px]">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+               <img src="assets/logobio.jpeg"  style="height:80px"/>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="text-primary transition">Home</a>
+                <a href="about.html" class="hover:text-emerald transition">About</a>
+                <div class="relative group flex items-center">
+                <a href="services.html" class="hover:text-emerald transition flex items-center gap-1 ">
+                    Services <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="absolute left-0 top-full w-64 bg-transparent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-2 overflow-hidden">
+                        <a href="service-biohazard.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Biohazard & Trauma Cleaning</a>
+                        <a href="service-domestic-commercial.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Domestic & Commercial Cleaning</a>
+                        <a href="service-infection-control.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Pathogen & Infection Control</a>
+                        <a href="service-eco-manufacturing.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Eco-Friendly Manufacturing</a>
+                        <a href="service-restoration.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Environmental & Restoration</a>
+                    </div>
+                </div>
+            </div>
+                <a href="gallery.html" class="hover:text-emerald transition">Gallery</a>
+                <a href="blog.html" class="hover:text-emerald transition">Blog</a>
+                <a href="careers.html" class="hover:text-emerald transition">Careers</a>
+                <a href="contact.html" class="hover:text-emerald transition">Contact</a>
+            </nav>
+
+            <!-- CTA / Contact -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="tel:+447424233154" class="flex items-center space-x-2">
+                    <i class="fas fa-phone-alt text-primary text-xl"></i>
+                    <div>
+                        <p class="text-sm font-bold text-gray-900">Call Us Any Time</p>
+                        <a href="tel:+447424233154" class="font-bold">07424233154</a>
+                    </div>
+                </a>
+                <a href="contact.html"
+                    class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition shadow-lg shadow-primary/30">
+                    Get a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-dark text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute w-full shadow-lg border-t border-gray-100">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-primary font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">About</a>
+                <a href="services.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Services</a>
+                <a href="gallery.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Gallery</a>
+                <a href="blog.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Blog</a>
+                <a href="careers.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Careers</a>
+                <a href="contact.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Contact</a>
+                <a href="contact.html"
+                    class="block mt-4 w-full text-center bg-primary text-white px-6 py-3 rounded-full font-semibold">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32">
+        <!-- Hero Section -->
+        <section class="relative bg-primary py-24 overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="assets/2.jpg" alt="Hero Background"
+                    class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/95"></div>
+            </div>
+
+            <div class="container mx-auto px-6 lg:px-12 relative z-10">
+                <div class="max-w-3xl">
+                    <div class="inline-block bg-emerald/20 text-emerald px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+                        Public Health Safety
+                    </div>
+                    <h1 class="text-4xl md:text-7xl font-heading font-black text-white mb-6 tracking-tight">Infection <span class="text-emerald">Control</span></h1>
+                    <p class="text-white/70 text-lg md:text-xl leading-relaxed">
+                        Advanced sanitization protocols to eliminate viral and bacterial pathogens at the source. Hospital-grade safety for commercial hubs.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Layout with Sticky Sidebar -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="flex flex-col lg:flex-row gap-16">
+                    
+                    <!-- Left Column: Scrollable Content -->
+                    <div class="w-full lg:w-2/3 space-y-20">
+                        
+                        <!-- Overview -->
+                        <div class="space-y-8">
+                            <img src="assets/2.jpg" alt="Sterile Environment" class="w-full rounded-[3rem] shadow-2xl aspect-video object-cover mb-12">
+                            <div class="space-y-4">
+                                <span class="text-emerald font-black tracking-widest text-xs uppercase">Viral Defense</span>
+                                <h2 class="text-4xl font-heading font-black text-primary leading-tight">Eliminating Threats, Protecting People.</h2>
+                            </div>
+                            <p class="text-gray-500 text-lg leading-relaxed">
+                                In an era of evolving biological threats, standard sanitization is no longer sufficient. Our infection control services utilize electrostatic spraying and broad-spectrum antimicrobial solutions that provide ongoing protection for high-traffic environments.
+                            </p>
+                        </div>
+
+                        <!-- Technical Process -->
+                        <div class="space-y-12">
+                            <div class="space-y-4 text-left">
+                                <h2 class="text-3xl font-heading font-black text-primary">The Sanitization <span class="text-emerald">Hierarchy</span></h2>
+                                <p class="text-gray-500 text-lg">Our structured approach to creating pathogen-free zones.</p>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <!-- Step 1 -->
+                                <div class="flex gap-8 items-start p-8 rounded-3xl bg-gray-50 border border-gray-100 group hover:bg-white hover:shadow-xl transition-all duration-500">
+                                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center flex-shrink-0 font-heading font-black text-xl">01</div>
+                                    <div class="space-y-2">
+                                        <h4 class="text-xl font-black text-primary">Pathogen Audit</h4>
+                                        <p class="text-gray-500">Identification of transmission risks and high-frequency touchpoint mapping across the entire site.</p>
+                                    </div>
+                                </div>
+                                <!-- Step 2 -->
+                                <div class="flex gap-8 items-start p-8 rounded-3xl bg-gray-50 border border-gray-100 group hover:bg-white hover:shadow-xl transition-all duration-500">
+                                    <div class="w-14 h-14 bg-emerald text-white rounded-2xl flex items-center justify-center flex-shrink-0 font-heading font-black text-xl">02</div>
+                                    <div class="space-y-2">
+                                        <h4 class="text-xl font-black text-primary">Active Disinfection</h4>
+                                        <p class="text-gray-500">Systematic application of log-6 reduction disinfectants via electrostatic spraying for 360-degree coverage.</p>
+                                    </div>
+                                </div>
+                                <!-- Step 3 -->
+                                <div class="flex gap-8 items-start p-8 rounded-3xl bg-gray-50 border border-gray-100 group hover:bg-white hover:shadow-xl transition-all duration-500">
+                                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center flex-shrink-0 font-heading font-black text-xl">03</div>
+                                    <div class="space-y-2">
+                                        <h4 class="text-xl font-black text-primary">Safety Verification</h4>
+                                        <p class="text-gray-500">Scientific validation of sterility levels using ATP testing before handing back the environment.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Scientific Methodology -->
+                        <div class="p-12 rounded-[3rem] bg-primary text-white space-y-8 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-64 h-64 bg-emerald/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+                            <div class="relative z-10 space-y-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-1 bg-emerald rounded-full"></div>
+                                    <span class="text-emerald font-black tracking-widest text-xs uppercase">The Science of Safety</span>
+                                </div>
+                                <h2 class="text-3xl md:text-4xl font-heading font-black">Data-Driven <span class="text-emerald">Infection</span> Control</h2>
+                                <p class="text-white/70 text-lg leading-relaxed">
+                                    We don't just clean; we decontaminate using verifiable scientific methods. Our infection control protocols are designed to eliminate 99.9999% of pathogens, providing a surgical-grade level of safety for commercial and public environments.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-microscope text-emerald"></i>
+                                        <span class="font-bold">ATP Bio-Luminescence Testing</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-shield-virus text-emerald"></i>
+                                        <span class="font-bold">Electrostatic Disinfection</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-vial text-emerald"></i>
+                                        <span class="font-bold">Log-6 Reduction Disinfectants</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <i class="fas fa-file-medical text-emerald"></i>
+                                        <span class="font-bold">Clinical Certification Reports</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pathogen Defense Matrix -->
+                        <div class="space-y-12">
+                            <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+                                <div class="space-y-4">
+                                    <h2 class="text-3xl font-heading font-black text-primary">Comprehensive <span class="text-emerald">Pathogen</span> Defense</h2>
+                                    <p class="text-gray-500 text-lg">Targeting the most resilient biological threats.</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="group">
+                                    <div class="relative rounded-3xl overflow-hidden mb-6 aspect-video">
+                                        <img src="assets/2.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Viral Defense">
+                                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all"></div>
+                                    </div>
+                                    <h4 class="text-xl font-black text-primary mb-2">Viral Neutralization</h4>
+                                    <p class="text-gray-500 text-sm leading-relaxed">Highly effective against enveloped and non-enveloped viruses, including Norovirus, Influenza, and SARS-CoV-2, ensuring rapid knockdown and residual protection.</p>
+                                </div>
+                                <div class="group">
+                                    <div class="relative rounded-3xl overflow-hidden mb-6 aspect-video">
+                                        <img src="assets/3.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Bacterial Eradication">
+                                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all"></div>
+                                    </div>
+                                    <h4 class="text-xl font-black text-primary mb-2">Bacterial & Spore Control</h4>
+                                    <p class="text-gray-500 text-sm leading-relaxed">Eradicating antibiotic-resistant bacteria such as MRSA and C. Difficile spores using oxidative technology that destroys cellular membranes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ -->
+                        <div class="space-y-12">
+                            <div class="space-y-4">
+                                <h2 class="text-3xl font-heading font-black text-primary">Sterility <span class="text-emerald">Support</span></h2>
+                                <p class="text-gray-500 text-lg leading-relaxed">Expert answers on public health maintenance.</p>
+                            </div>
+                            <div class="space-y-4" id="faq-accordion">
+                                <!-- FAQ Item 1 -->
+                                <div class="faq-item border border-gray-100 rounded-3xl p-8 hover:bg-gray-50 transition-all cursor-pointer group overflow-hidden" onclick="toggleFaq(this)">
+                                    <div class="flex justify-between items-center gap-4">
+                                        <h4 class="text-lg font-black text-primary">What is "Log-6 reduction"?</h4>
+                                        <div class="faq-icon w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                            <i class="fas fa-plus text-xs transition-transform duration-300"></i>
+                                        </div>
+                                    </div>
+                                    <div class="faq-answer max-h-0 opacity-0 transition-all duration-500 ease-in-out">
+                                        <p class="pt-6 text-gray-500 leading-relaxed">
+                                            Log-6 reduction is a mathematical term used in microbiology to describe a 99.9999% reduction in the number of live pathogens. It is the highest standard of sterilization used in hospital and clinical environments.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item 2 -->
+                                <div class="faq-item border border-gray-100 rounded-3xl p-8 hover:bg-gray-50 transition-all cursor-pointer group overflow-hidden" onclick="toggleFaq(this)">
+                                    <div class="flex justify-between items-center gap-4">
+                                        <h4 class="text-lg font-black text-primary">How long do the disinfectants remain active?</h4>
+                                        <div class="faq-icon w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                            <i class="fas fa-plus text-xs transition-transform duration-300"></i>
+                                        </div>
+                                    </div>
+                                    <div class="faq-answer max-h-0 opacity-0 transition-all duration-500 ease-in-out">
+                                        <p class="pt-6 text-gray-500 leading-relaxed">
+                                            While the initial "kill" happens on contact, our proprietary antimicrobial coatings can provide residual protection for up to 30 days on high-touch surfaces, preventing new pathogens from colonizing.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- FAQ Item 3 -->
+                                <div class="faq-item border border-gray-100 rounded-3xl p-8 hover:bg-gray-50 transition-all cursor-pointer group overflow-hidden" onclick="toggleFaq(this)">
+                                    <div class="flex justify-between items-center gap-4">
+                                        <h4 class="text-lg font-black text-primary">Is electrostatic spraying safe for electronics?</h4>
+                                        <div class="faq-icon w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                            <i class="fas fa-plus text-xs transition-transform duration-300"></i>
+                                        </div>
+                                    </div>
+                                    <div class="faq-answer max-h-0 opacity-0 transition-all duration-500 ease-in-out">
+                                        <p class="pt-6 text-gray-500 leading-relaxed">
+                                            Yes. The droplets produced by our electrostatic sprayers are so fine (40-100 microns) that they wrap around surfaces without causing pooling or moisture damage, making them safe for keyboards, monitors, and other office technology.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Sticky Sidebar -->
+                    <div class="w-full lg:w-1/3">
+                        <div class="sticky top-32 space-y-8">
+                            
+                            <!-- Help / CTA Card -->
+                            <div class="p-8 rounded-[2.5rem] bg-primary text-white relative overflow-hidden shadow-2xl">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16"></div>
+                                <div class="relative z-10 space-y-8">
+                                    <h4 class="text-3xl font-heading font-black leading-tight">Reclaim Your <span class="text-emerald">Property</span></h4>
+                                    <p class="text-white/70 leading-relaxed text-sm">
+                                        Address structural environmental damage before it becomes irreversible. Contact our specialists today.
+                                    </p>
+                                    <div class="space-y-6">
+                                        <a href="tel:+447424233154" class="flex items-center gap-5 group">
+                                            <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-emerald group-hover:bg-emerald group-hover:text-primary transition-all duration-300">
+                                                <i class="fas fa-phone-alt"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-[10px] text-white/40 font-black uppercase tracking-widest mb-1">Call Us</p>
+                                                <p class="font-bold text-lg">07424233154</p>
+                                            </div>
+                                        </a>
+                                        <a href="mailto:chima.elendu28@gmail.com" class="flex items-center gap-5 group">
+                                            <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-emerald group-hover:bg-emerald group-hover:text-primary transition-all duration-300">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div>
+                                                <p class="text-[10px] text-white/40 font-black uppercase tracking-widest mb-1">Email Us</p>
+                                                <p class="font-bold">chima.elendu28@gmail.com</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <a href="contact.html" class="block w-full bg-emerald text-primary text-center font-black py-5 rounded-2xl hover:bg-white transition-all duration-300 shadow-lg shadow-emerald/20">
+                                        Get a Quote
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Services Navigation -->
+                            <div class="p-8 rounded-[2.5rem] bg-white border border-gray-100 shadow-xl">
+                                <h4 class="text-2xl font-heading font-black text-primary mb-8">Our Services</h4>
+                                <div class="flex flex-col space-y-4">
+                                    <a href="service-biohazard.html" class="flex items-center justify-between p-5 rounded-2xl bg-gray-50 text-gray-700 font-bold hover:bg-primary hover:text-white transition-all group">
+                                        Biohazard Cleaning <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                    </a>
+                                    <a href="service-domestic-commercial.html" class="flex items-center justify-between p-5 rounded-2xl bg-gray-50 text-gray-700 font-bold hover:bg-primary hover:text-white transition-all group">
+                                        Domestic & Commercial <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                    </a>
+                                    <a href="service-infection-control.html" class="flex items-center justify-between p-5 rounded-2xl bg-emerald text-primary font-bold shadow-lg shadow-emerald/20 transition-all">
+                                        Infection Control <i class="fas fa-chevron-right text-xs"></i>
+                                    </a>
+                                    <a href="service-eco-manufacturing.html" class="flex items-center justify-between p-5 rounded-2xl bg-gray-50 text-gray-700 font-bold hover:bg-primary hover:text-white transition-all group">
+                                        Eco-Manufacturing <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                    </a>
+                                    <a href="service-restoration.html" class="flex items-center justify-between p-5 rounded-2xl bg-gray-50 text-gray-700 font-bold hover:bg-primary hover:text-white transition-all group">
+                                        Structural Restoration <i class="fas fa-chevron-right text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+   <footer class="bg-gray-900 text-white pt-16 pb-0">
+        <div class="container mx-auto px-4 lg:px-12 mb-12">
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-5">
+                        <img src="assets/logobio.jpeg" style="height:80px"/>
+                    </a>
+                    <p class="text-gray-400 text-base leading-relaxed mb-5">Top-notch eco-friendly cleaning services for
+                        homes and businesses. Quality, reliability, and care — every time.</p>
+                   <div class="flex space-x-3">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=61589912471893" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    
+    <!-- TikTok (Replaced Twitter) -->
+    <a href="https://www.tiktok.com/@user6169125055238?_r=1&_t=ZN-96XgiFCC4Qx" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/shadesofemerald.l" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <!-- Google Business Profile / GMB (Replaced LinkedIn) -->
+    <a href="#"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-google"></i>
+    </a>
+</div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Quick links</h4>
+                    <ul class="space-y-3 text-base">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Home</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-400 hover:text-emerald transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>About Us</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Services</a></li>
+                        <li><a href="gallery.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Gallery</a></li>
+                        <li><a href="careers.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Careers</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Our services</h4>
+                    <ul class="space-y-3 text-base">
+                        <li><a href="service-biohazard.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Biohazard Cleaning</a></li>
+                        <li><a href="service-domestic-commercial.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Domestic & Commercial</a>
+                        </li>
+                        <li><a href="service-infection-control.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Infection Control</a></li>
+                        <li><a href="service-eco-manufacturing.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Eco-Manufacturing</a></li>
+                        <li><a href="service-restoration.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Structural Restoration</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Contact info</h4>
+                    <ul class="space-y-4 text-base">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt text-white mt-1 mr-3"></i><span
+                                class="text-gray-400">7 Clent Road, Oldbury, West Midlands, B68 9EU</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt text-white mr-3"></i><span
+                                class="text-gray-400">07424233154</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-white mr-3"></i><span
+                                class="text-gray-400">chima.elendu28@gmail.com</span></li>
+                        <li class="flex items-center"><i class="fas fa-clock text-white mr-3"></i><span
+                                class="text-gray-400">Mon–Sat: 8:00 AM – 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 py-8 text-gray-500 text-base">
+            <div
+                class="container mx-auto px-4 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <p>&copy; 2026 Shades of Emerald Eco Limited. All Rights Reserved</p>
+                <p>Design and developed by <a href="https://kyleinfotech.co.in/" target="_blank"
+                        class="text-accent hover:text-white transition">Kyle Infotech</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Shades of Emerald Eco Limited</title>
+    <meta name="description"
+        content="Explore our portfolio of clinical cleaning, biohazard restoration, and eco-friendly manufacturing projects." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D1F52", // Deep Midnight Navy
+                        "primary-dark": "#081436",
+                        secondary: "#1E3A8A", // Complementary Navy
+                        accent: "#10B981", // Brand Emerald Green
+                        emerald: "#10B981", // Brand Emerald Green
+                        dark: "#0D1F52",
+                        light: "#F8FAFC",
+                    },
+                    fontFamily: {
+                        sans: ["Outfit", "sans-serif"],
+                        heading: ["Outfit", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Lightgallery CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery-bundle.min.css" />
+    <style>
+        .gallery-item {
+            transition: all 0.5s ease-in-out;
+        }
+        .lg-backdrop {
+            background-color: rgba(13, 31, 82, 0.95);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-dark bg-white antialiased">
+    <!-- Topbar -->
+    <div class="bg-primary text-white text-sm py-2 hidden md:block">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-envelope mr-2"></i> chima.elendu28@gmail.com</span>
+             
+            </div>
+               <span><i class="fas fa-clock mr-2"></i> Mon - Sat: 8:00 AM - 6:00
+                    PM</span>
+           
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+<header id="header" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md top-0 md:top-[36px]">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+               <img src="assets/logobio.jpeg"  style="height:80px"/>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="text-primary transition">Home</a>
+                <a href="about.html" class="hover:text-emerald transition">About</a>
+                <div class="relative group flex items-center">
+                <a href="services.html" class="hover:text-emerald transition flex items-center gap-1">
+                    Services <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="absolute left-0 top-full w-64 bg-transparent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-2 overflow-hidden">
+                        <a href="service-biohazard.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Biohazard & Trauma Cleaning</a>
+                        <a href="service-domestic-commercial.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Domestic & Commercial Cleaning</a>
+                        <a href="service-infection-control.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Pathogen & Infection Control</a>
+                        <a href="service-eco-manufacturing.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Eco-Friendly Manufacturing</a>
+                        <a href="service-restoration.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Environmental & Restoration</a>
+                    </div>
+                </div>
+            </div>
+                <a href="gallery.html" class="hover:text-emerald transition">Gallery</a>
+                <a href="blog.html" class="hover:text-emerald transition">Blog</a>
+                <a href="careers.html" class="hover:text-emerald transition">Careers</a>
+                <a href="contact.html" class="hover:text-emerald transition">Contact</a>
+            </nav>
+
+            <!-- CTA / Contact -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="tel:+447424233154" class="flex items-center space-x-2">
+                    <i class="fas fa-phone-alt text-primary text-xl"></i>
+                    <div>
+                        <p class="text-sm font-bold text-gray-900">Call Us Any Time</p>
+                        <a href="tel:+447424233154" class="font-bold">07424233154</a>
+                    </div>
+                </a>
+                <a href="contact.html"
+                    class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition shadow-lg shadow-primary/30">
+                    Get a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-dark text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute w-full shadow-lg border-t border-gray-100">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-primary font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">About</a>
+                <a href="services.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Services</a>
+                <a href="gallery.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Gallery</a>
+                <a href="blog.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Blog</a>
+                <a href="careers.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Careers</a>
+                <a href="contact.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Contact</a>
+                <a href="contact.html"
+                    class="block mt-4 w-full text-center bg-primary text-white px-6 py-3 rounded-full font-semibold">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32">
+        <!-- Hero Section -->
+        <section class="relative bg-primary py-32 overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="assets/12.jpg" alt="Hero Background"
+                    class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/95"></div>
+            </div>
+
+            <div class="container mx-auto px-6 lg:px-12 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-heading font-black text-white mb-6 tracking-tight">Our Visual <span
+                        class="text-emerald">Portfolio</span></h1>
+                <p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto">Witness the transformation. From clinical
+                    restorations to eco-friendly innovations.</p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="py-24 bg-white">
+            <div class="container mx-auto px-6 lg:px-12">
+                <!-- Category Filters -->
+                <div class="flex flex-wrap justify-center gap-4 mb-16">
+                    <button
+                        class="filter-btn px-8 py-2 rounded-full border-2 border-emerald bg-emerald text-white font-bold transition-all" data-filter="all">All</button>
+                    <button
+                        class="filter-btn px-8 py-2 rounded-full border-2 border-gray-100 hover:border-emerald hover:text-emerald text-gray-500 font-bold transition-all" data-filter="biohazard">Biohazard</button>
+                    <button
+                        class="filter-btn px-8 py-2 rounded-full border-2 border-gray-100 hover:border-emerald hover:text-emerald text-gray-500 font-bold transition-all" data-filter="commercial">Commercial</button>
+                    <button
+                        class="filter-btn px-8 py-2 rounded-full border-2 border-gray-100 hover:border-emerald hover:text-emerald text-gray-500 font-bold transition-all" data-filter="domestic">Domestic</button>
+                    <button
+                        class="filter-btn px-8 py-2 rounded-full border-2 border-gray-100 hover:border-emerald hover:text-emerald text-gray-500 font-bold transition-all" data-filter="restoration">Restoration</button>
+                    <button
+                        class="filter-btn px-8 py-2 rounded-full border-2 border-gray-100 hover:border-emerald hover:text-emerald text-gray-500 font-bold transition-all" data-filter="eco-manufacturing">Eco-Manufacturing</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Item 1: Biohazard -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="biohazard">
+                        <a href="assets/1.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/1.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Pathogen Remediation">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Biohazard</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Pathogen Remediation</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 2: Biohazard -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="biohazard">
+                        <a href="assets/2.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/2.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Clinical Sanitisation">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Biohazard</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Clinical Sanitisation</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 3: Biohazard -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="biohazard">
+                        <a href="assets/3.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/3.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Hazardous Waste Disposal">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Biohazard</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Hazardous Waste Disposal</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 4: Commercial -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="commercial">
+                        <a href="assets/4.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/4.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Corporate Office Disinfection">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Commercial</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Corporate Office Disinfection</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 5: Commercial -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="commercial">
+                        <a href="assets/5.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/5.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="High-Rise Window Polishing">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Commercial</span>
+                                <h3 class="text-2xl font-black text-white leading-none">High-Rise Window Polishing</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 6: Commercial -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="commercial">
+                        <a href="assets/6.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/6.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Industrial Floor Buffing">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Commercial</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Industrial Floor Buffing</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 7: Domestic -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="domestic">
+                        <a href="assets/7.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/7.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Eco-Friendly Kitchen Sanitisation">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Domestic</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Eco-Friendly Kitchen Sanitisation</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 8: Domestic -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="domestic">
+                        <a href="assets/8.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/8.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Premium Carpet Restoration">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Domestic</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Premium Carpet Restoration</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 9: Domestic -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="domestic">
+                        <a href="assets/9.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/9.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Organic Upholstery Deep Cleaning">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Domestic</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Organic Upholstery Deep Cleaning</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 10: Restoration -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="restoration">
+                        <a href="assets/10.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/10.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Water Damage Structural Recovery">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Restoration</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Water Damage Structural Recovery</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 11: Restoration -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="restoration">
+                        <a href="assets/11.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/11.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Soot and Smoke Remediation">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Restoration</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Soot and Smoke Remediation</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 12: Restoration -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="restoration">
+                        <a href="assets/12.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/12.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Advanced Mold Inactivation">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Restoration</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Advanced Mold Inactivation</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 13: Eco-Manufacturing -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="eco-manufacturing">
+                        <a href="assets/13.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/13.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Green Cleaning Formulation Lab">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Eco-Manufacturing</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Green Cleaning Formulation Lab</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 14: Eco-Manufacturing -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="eco-manufacturing">
+                        <a href="assets/14.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/14.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Eco-Friendly Product Packaging">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Eco-Manufacturing</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Eco-Friendly Product Packaging</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 15: Eco-Manufacturing -->
+                    <div class="gallery-item group relative overflow-hidden rounded-[2.5rem] shadow-lg aspect-[4/5]" data-category="eco-manufacturing">
+                        <a href="assets/15.jpg" class="block w-full h-full lg-item">
+                            <img src="assets/15.jpg"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                alt="Sustainable Solutions Distribution">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 p-10 translate-y-10 group-hover:translate-y-0 transition-transform duration-500 opacity-0 group-hover:opacity-100">
+                                <span
+                                    class="text-emerald font-black uppercase tracking-widest text-xs mb-2 block">Eco-Manufacturing</span>
+                                <h3 class="text-2xl font-black text-white leading-none">Sustainable Solutions Distribution</h3>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 border border-white/20">
+                                <i class="fas fa-expand-alt text-white text-xl"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="mt-20 text-center">
+                    <a href="contact.html"
+                        class="inline-block px-12 py-4 bg-primary text-white rounded-full font-black hover:bg-primary-dark transition-all shadow-xl shadow-primary/20">
+                        Discuss Your Project
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-12 text-center">
+                <h2 class="text-3xl md:text-5xl font-heading font-black text-primary mb-8 leading-tight">Ready to See
+                    Your Space <br> <span class="text-emerald">Transformed?</span></h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto mb-10">Join our portfolio of satisfied clients and
+                    experience the Shades of Emerald difference.</p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="tel:+447424233154" class="flex items-center gap-3 text-primary font-black">
+                        <i class="fas fa-phone-alt text-emerald"></i> 07424233154
+                    </a>
+                    <a href="contact.html" class="flex items-center gap-3 text-primary font-black">
+                        <i class="fas fa-envelope text-emerald"></i> chima.elendu28@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+ <footer class="bg-gray-900 text-white pt-16 pb-0">
+        <div class="container mx-auto px-4 lg:px-12 mb-12">
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-5">
+                        <img src="assets/logobio.jpeg" style="height:80px"/>
+                    </a>
+                    <p class="text-gray-400 text-base leading-relaxed mb-5">Top-notch eco-friendly cleaning services for
+                        homes and businesses. Quality, reliability, and care — every time.</p>
+                   <div class="flex space-x-3">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=61589912471893" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    
+    <!-- TikTok (Replaced Twitter) -->
+    <a href="https://www.tiktok.com/@user6169125055238?_r=1&_t=ZN-96XgiFCC4Qx" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/shadesofemerald.l" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <!-- Google Business Profile / GMB (Replaced LinkedIn) -->
+    <a href="#"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-google"></i>
+    </a>
+</div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Quick links</h4>
+                    <ul class="space-y-3 text-base">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Home</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-400 hover:text-emerald transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>About Us</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Services</a></li>
+                        <li><a href="gallery.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Gallery</a></li>
+                        <li><a href="careers.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Careers</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Our services</h4>
+                    <ul class="space-y-3 text-base">
+                        <li><a href="service-biohazard.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Biohazard Cleaning</a></li>
+                        <li><a href="service-domestic-commercial.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Domestic & Commercial</a>
+                        </li>
+                        <li><a href="service-infection-control.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Infection Control</a></li>
+                        <li><a href="service-eco-manufacturing.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Eco-Manufacturing</a></li>
+                        <li><a href="service-restoration.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Structural Restoration</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Contact info</h4>
+                    <ul class="space-y-4 text-base">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt text-white mt-1 mr-3"></i><span
+                                class="text-gray-400">7 Clent Road, Oldbury, West Midlands, B68 9EU</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt text-white mr-3"></i><span
+                                class="text-gray-400">07424233154</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-white mr-3"></i><span
+                                class="text-gray-400">chima.elendu28@gmail.com</span></li>
+                        <li class="flex items-center"><i class="fas fa-clock text-white mr-3"></i><span
+                                class="text-gray-400">Mon–Sat: 8:00 AM – 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 py-8 text-gray-500 text-base">
+            <div
+                class="container mx-auto px-4 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <p>&copy; 2026 Shades of Emerald Eco Limited. All Rights Reserved</p>
+                <p>Design and developed by <a href="https://kyleinfotech.co.in/" target="_blank"
+                        class="text-accent hover:text-white transition">Kyle Infotech</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightgallery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Gallery Filtering and Lightgallery
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const galleryGrid = document.getElementById('gallery-grid');
+
+            // Initialize Lightgallery
+            let lg = lightGallery(galleryGrid, {
+                plugins: [lgZoom, lgThumbnail],
+                selector: '.lg-item',
+                speed: 500,
+                download: false,
+            });
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+
+                    // Update active button
+                    filterButtons.forEach(b => {
+                        b.classList.remove('bg-emerald', 'text-white', 'border-emerald');
+                        b.classList.add('bg-white', 'text-gray-500', 'border-gray-100');
+                    });
+                    btn.classList.add('bg-emerald', 'text-white', 'border-emerald');
+                    btn.classList.remove('bg-white', 'text-gray-500', 'border-gray-100');
+
+                    // Filter items with animation
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+
+                    // Refresh Lightgallery after filtering
+                    setTimeout(() => {
+                        lg.destroy();
+                        lg = lightGallery(galleryGrid, {
+                            plugins: [lgZoom, lgThumbnail],
+                            selector: '.gallery-item[style*="display: block"] .lg-item',
+                            speed: 500,
+                            download: false,
+                        });
+                    }, 350);
+                });
+            });
+
+            // Handle Hash on Load (e.g., gallery.html#biohazard)
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetBtn = document.querySelector(`.filter-btn[data-filter="${hash}"]`);
+                if (targetBtn) {
+                    targetBtn.click();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
+

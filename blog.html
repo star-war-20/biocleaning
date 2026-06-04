@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog & Insights | Shades of Emerald Eco Limited</title>
+    <meta name="description"
+        content="Stay informed with the latest insights on clinical hygiene, eco-friendly cleaning technology, and industry best practices." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D1F52", // Deep Midnight Navy
+                        "primary-dark": "#081436",
+                        secondary: "#1E3A8A", // Complementary Navy
+                        accent: "#10B981", // Brand Emerald Green
+                        emerald: "#10B981", // Brand Emerald Green
+                        dark: "#0D1F52",
+                        light: "#F8FAFC",
+                    },
+                    fontFamily: {
+                        sans: ["Outfit", "sans-serif"],
+                        heading: ["Outfit", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="font-sans text-dark bg-white antialiased">
+    <!-- Topbar -->
+      <div class="bg-primary text-white text-sm py-2 hidden md:block">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-envelope mr-2"></i> chima.elendu28@gmail.com</span>
+             
+            </div>
+               <span><i class="fas fa-clock mr-2"></i> Mon - Sat: 8:00 AM - 6:00
+                    PM</span>
+           
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+<header id="header" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md top-0 md:top-[36px]">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+               <img src="assets/logobio.jpeg"  style="height:80px"/>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="text-primary transition">Home</a>
+                <a href="about.html" class="hover:text-emerald transition">About</a>
+                <div class="relative group flex items-center">
+                <a href="services.html" class="hover:text-emerald transition flex items-center gap-1 py-2">
+                    Services <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="absolute left-0 top-full w-64 bg-transparent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-2 overflow-hidden">
+                        <a href="service-biohazard.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Biohazard & Trauma Cleaning</a>
+                        <a href="service-domestic-commercial.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Domestic & Commercial Cleaning</a>
+                        <a href="service-infection-control.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Pathogen & Infection Control</a>
+                        <a href="service-eco-manufacturing.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Eco-Friendly Manufacturing</a>
+                        <a href="service-restoration.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Environmental & Restoration</a>
+                    </div>
+                </div>
+            </div>
+                <a href="gallery.html" class="hover:text-emerald transition">Gallery</a>
+                <a href="blog.html" class="hover:text-emerald transition">Blog</a>
+                <a href="careers.html" class="hover:text-emerald transition">Careers</a>
+                <a href="contact.html" class="hover:text-emerald transition">Contact</a>
+            </nav>
+
+            <!-- CTA / Contact -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="tel:+447424233154" class="flex items-center space-x-2">
+                    <i class="fas fa-phone-alt text-primary text-xl"></i>
+                    <div>
+                        <p class="text-sm font-bold text-gray-900">Call Us Any Time</p>
+                        <a href="tel:+447424233154" class="font-bold">07424233154</a>
+                    </div>
+                </a>
+                <a href="contact.html"
+                    class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition shadow-lg shadow-primary/30">
+                    Get a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-dark text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute w-full shadow-lg border-t border-gray-100">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-primary font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">About</a>
+                <a href="services.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Services</a>
+                <a href="gallery.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Gallery</a>
+                <a href="blog.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Blog</a>
+                <a href="careers.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Careers</a>
+                <a href="contact.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Contact</a>
+                <a href="contact.html"
+                    class="block mt-4 w-full text-center bg-primary text-white px-6 py-3 rounded-full font-semibold">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32">
+        <!-- Hero Section -->
+        <section class="relative bg-primary py-32 overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="assets/12.jpg" alt="Hero Background" class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/95"></div>
+            </div>
+
+            <div class="container mx-auto px-6 lg:px-12 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-heading font-black text-white mb-6 tracking-tight">Blog & <span class="text-emerald">Insights</span></h1>
+                <p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto">Expert perspectives on clinical safety, environmental science, and modern hygiene standards.</p>
+            </div>
+        </section>
+
+        <!-- Blog Grid Section -->
+        <section class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Blog Card 1 -->
+                    <article class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col">
+                        <div class="relative overflow-hidden aspect-video">
+                            <img src="assets/2.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Blog Post">
+                            <div class="absolute top-6 left-6">
+                                <span class="bg-emerald text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Hygiene Standards</span>
+                            </div>
+                        </div>
+                        <div class="p-10 flex flex-col flex-grow space-y-4">
+                            <div class="text-gray-400 text-xs font-bold tracking-widest uppercase">May 15, 2026</div>
+                            <h2 class="text-2xl font-heading font-black text-primary group-hover:text-emerald transition-colors leading-tight">
+                                The art of clinical precision: Why standard cleaning isn't enough
+                            </h2>
+                            <p class="text-gray-500 text-base leading-relaxed line-clamp-3">
+                                Discover the metrics that separate boutique sanitation from generic maintenance.
+                            </p>
+                            <div class="pt-6 mt-auto">
+                                <a href="blog-precision.html" class="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] border-b-2 border-emerald pb-1 hover:text-emerald transition-colors">
+                                    Read Article <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col">
+                        <div class="relative overflow-hidden aspect-video">
+                            <img src="assets/6.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Blog Post">
+                            <div class="absolute top-6 left-6">
+                                <span class="bg-emerald text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Ritual</span>
+                            </div>
+                        </div>
+                        <div class="p-10 flex flex-col flex-grow space-y-4">
+                            <div class="text-gray-400 text-xs font-bold tracking-widest uppercase">May 08, 2026</div>
+                            <h2 class="text-2xl font-heading font-black text-primary group-hover:text-emerald transition-colors leading-tight">
+                                Curating luxury: Maintaining high-value corporate environments
+                            </h2>
+                            <p class="text-gray-500 text-base leading-relaxed line-clamp-3">
+                                How Shades of Emerald preserves the integrity of London's most prestigious workspaces.
+                            </p>
+                            <div class="pt-6 mt-auto">
+                                <a href="blog-luxury.html" class="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] border-b-2 border-emerald pb-1 hover:text-emerald transition-colors">
+                                    Read Article <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col">
+                        <div class="relative overflow-hidden aspect-video">
+                            <img src="assets/4.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Blog Post">
+                            <div class="absolute top-6 left-6">
+                                <span class="bg-emerald text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Flow</span>
+                            </div>
+                        </div>
+                        <div class="p-10 flex flex-col flex-grow space-y-4">
+                            <div class="text-gray-400 text-xs font-bold tracking-widest uppercase">April 22, 2026</div>
+                            <h2 class="text-2xl font-heading font-black text-primary group-hover:text-emerald transition-colors leading-tight">
+                                Adaptive flow: How strategic scheduling boosts workplace ROI
+                            </h2>
+                            <p class="text-gray-500 text-base leading-relaxed line-clamp-3">
+                                Synchronization strategies that eliminate operational friction and enhance productivity.
+                            </p>
+                            <div class="pt-6 mt-auto">
+                                <a href="blog-flow.html" class="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] border-b-2 border-emerald pb-1 hover:text-emerald transition-colors">
+                                    Read Article <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 4 -->
+                    <article class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col">
+                        <div class="relative overflow-hidden aspect-video">
+                            <img src="assets/1.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Blog Post">
+                            <div class="absolute top-6 left-6">
+                                <span class="bg-emerald text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Industry News</span>
+                            </div>
+                        </div>
+                        <div class="p-10 flex flex-col flex-grow space-y-4">
+                            <div class="text-gray-400 text-xs font-bold tracking-widest uppercase">April 10, 2026</div>
+                            <h2 class="text-2xl font-heading font-black text-primary group-hover:text-emerald transition-colors leading-tight">
+                                New Safety Regulations for Biohazard Response
+                            </h2>
+                            <p class="text-gray-500 text-base leading-relaxed line-clamp-3">
+                                How upcoming UK legislation is reshaping the standards for trauma and biohazard decontamination.
+                            </p>
+                            <div class="pt-6 mt-auto">
+                                <a href="#" class="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] border-b-2 border-emerald pb-1 hover:text-emerald transition-colors">
+                                    Read Article <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 5 -->
+                    <article class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col">
+                        <div class="relative overflow-hidden aspect-video">
+                            <img src="assets/7.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Blog Post">
+                            <div class="absolute top-6 left-6">
+                                <span class="bg-emerald text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Domestic Rituals</span>
+                            </div>
+                        </div>
+                        <div class="p-10 flex flex-col flex-grow space-y-4">
+                            <div class="text-gray-400 text-xs font-bold tracking-widest uppercase">March 28, 2026</div>
+                            <h2 class="text-2xl font-heading font-black text-primary group-hover:text-emerald transition-colors leading-tight">
+                                Sustainable Living: The Eco-Clean Home
+                            </h2>
+                            <p class="text-gray-500 text-base leading-relaxed line-clamp-3">
+                                Simple steps to transition your household hygiene to a zero-waste, environmentally friendly system.
+                            </p>
+                            <div class="pt-6 mt-auto">
+                                <a href="#" class="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] border-b-2 border-emerald pb-1 hover:text-emerald transition-colors">
+                                    Read Article <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 6 -->
+                    <article class="bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col">
+                        <div class="relative overflow-hidden aspect-video">
+                            <img src="assets/9.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Blog Post">
+                            <div class="absolute top-6 left-6">
+                                <span class="bg-emerald text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">Public Health</span>
+                            </div>
+                        </div>
+                        <div class="p-10 flex flex-col flex-grow space-y-4">
+                            <div class="text-gray-400 text-xs font-bold tracking-widest uppercase">March 15, 2026</div>
+                            <h2 class="text-2xl font-heading font-black text-primary group-hover:text-emerald transition-colors leading-tight">
+                                Pathogen Control in High-Traffic Hubs
+                            </h2>
+                            <p class="text-gray-500 text-base leading-relaxed line-clamp-3">
+                                Assessing the impact of high-end sanitisation in schools and transit centres during flu season.
+                            </p>
+                            <div class="pt-6 mt-auto">
+                                <a href="#" class="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-[10px] border-b-2 border-emerald pb-1 hover:text-emerald transition-colors">
+                                    Read Article <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-20 flex justify-center items-center space-x-4">
+                    <button class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-primary hover:bg-emerald hover:text-white transition-all">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="w-12 h-12 rounded-full bg-emerald text-white flex items-center justify-center font-bold">1</button>
+                    <button class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-primary hover:bg-emerald hover:text-white transition-all font-bold">2</button>
+                    <button class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-primary hover:bg-emerald hover:text-white transition-all font-bold">3</button>
+                    <button class="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-primary hover:bg-emerald hover:text-white transition-all">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+   <footer class="bg-gray-900 text-white pt-16 pb-0">
+        <div class="container mx-auto px-4 lg:px-12 mb-12">
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-5">
+                        <img src="assets/logobio.jpeg" style="height:80px"/>
+                    </a>
+                    <p class="text-gray-400 text-base leading-relaxed mb-5">Top-notch eco-friendly cleaning services for
+                        homes and businesses. Quality, reliability, and care — every time.</p>
+                   <div class="flex space-x-3">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=61589912471893" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    
+    <!-- TikTok (Replaced Twitter) -->
+    <a href="https://www.tiktok.com/@user6169125055238?_r=1&_t=ZN-96XgiFCC4Qx" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/shadesofemerald.l" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <!-- Google Business Profile / GMB (Replaced LinkedIn) -->
+    <a href="#"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-google"></i>
+    </a>
+</div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Quick links</h4>
+                    <ul class="space-y-3 text-base">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Home</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-400 hover:text-emerald transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>About Us</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Services</a></li>
+                        <li><a href="gallery.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Gallery</a></li>
+                        <li><a href="careers.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Careers</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Our services</h4>
+                    <ul class="space-y-3 text-base">
+                        <li><a href="service-biohazard.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Biohazard Cleaning</a></li>
+                        <li><a href="service-domestic-commercial.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Domestic & Commercial</a>
+                        </li>
+                        <li><a href="service-infection-control.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Infection Control</a></li>
+                        <li><a href="service-eco-manufacturing.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Eco-Manufacturing</a></li>
+                        <li><a href="service-restoration.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Structural Restoration</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Contact info</h4>
+                    <ul class="space-y-4 text-base">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt text-white mt-1 mr-3"></i><span
+                                class="text-gray-400">7 Clent Road, Oldbury, West Midlands, B68 9EU</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt text-white mr-3"></i><span
+                                class="text-gray-400">07424233154</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-white mr-3"></i><span
+                                class="text-gray-400">chima.elendu28@gmail.com</span></li>
+                        <li class="flex items-center"><i class="fas fa-clock text-white mr-3"></i><span
+                                class="text-gray-400">Mon–Sat: 8:00 AM – 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 py-8 text-gray-500 text-base">
+            <div
+                class="container mx-auto px-4 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <p>&copy; 2026 Shades of Emerald Eco Limited. All Rights Reserved</p>
+                <p>Design and developed by <a href="https://kyleinfotech.co.in/" target="_blank"
+                        class="text-accent hover:text-white transition">Kyle Infotech</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+

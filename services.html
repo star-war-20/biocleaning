@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services | Shades of Emerald Eco Limited</title>
+    <meta name="description"
+        content="Professional biohazard cleaning, eco-friendly domestic cleaning, and green innovation manufacturing services by Shades of Emerald Eco Limited." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0D1F52", // Deep Midnight Navy
+                        "primary-dark": "#081436",
+                        secondary: "#1E3A8A", // Complementary Navy
+                        accent: "#10B981", // Brand Emerald Green
+                        emerald: "#10B981", // Brand Emerald Green
+                        dark: "#0D1F52",
+                        light: "#F8FAFC",
+                    },
+                    fontFamily: {
+                        sans: ["Outfit", "sans-serif"],
+                        heading: ["Outfit", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="font-sans text-dark bg-white antialiased">
+    <!-- Topbar -->
+   <div class="bg-primary text-white text-sm py-2 hidden md:block">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-envelope mr-2"></i> chima.elendu28@gmail.com</span>
+             
+            </div>
+               <span><i class="fas fa-clock mr-2"></i> Mon - Sat: 8:00 AM - 6:00
+                    PM</span>
+           
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+   <header id="header" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md top-0 md:top-[36px]">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+               <img src="assets/logobio.jpeg"  style="height:80px"/>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="text-primary transition">Home</a>
+                <a href="about.html" class="hover:text-emerald transition">About</a>
+                <div class="relative group flex items-center">
+                <a href="services.html" class="hover:text-emerald transition flex items-center gap-1 py-2">
+                    Services <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                </a>
+                <!-- Dropdown Menu -->
+                <div class="absolute left-0 top-full w-64 bg-transparent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 pt-2">
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 py-2 overflow-hidden">
+                        <a href="service-biohazard.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Biohazard & Trauma Cleaning</a>
+                        <a href="service-domestic-commercial.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Domestic & Commercial Cleaning</a>
+                        <a href="service-infection-control.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Pathogen & Infection Control</a>
+                        <a href="service-eco-manufacturing.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Eco-Friendly Manufacturing</a>
+                        <a href="service-restoration.html" class="block px-6 py-3 hover:bg-gray-50 text-gray-700 hover:text-emerald transition text-sm font-medium">Environmental & Restoration</a>
+                    </div>
+                </div>
+            </div>
+                <a href="gallery.html" class="hover:text-emerald transition">Gallery</a>
+                <a href="blog.html" class="hover:text-emerald transition">Blog</a>
+                <a href="careers.html" class="hover:text-emerald transition">Careers</a>
+                <a href="contact.html" class="hover:text-emerald transition">Contact</a>
+            </nav>
+
+            <!-- CTA / Contact -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="tel:+447424233154" class="flex items-center space-x-2">
+                    <i class="fas fa-phone-alt text-primary text-xl"></i>
+                    <div>
+                        <p class="text-sm font-bold text-gray-900">Call Us Any Time</p>
+                        <a href="tel:+447424233154" class="font-bold">07424233154</a>
+                    </div>
+                </a>
+                <a href="contact.html"
+                    class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-semibold transition shadow-lg shadow-primary/30">
+                    Get a Quote
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-dark text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute w-full shadow-lg border-t border-gray-100">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-primary font-medium">Home</a>
+                <a href="about.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">About</a>
+                <a href="services.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Services</a>
+                <a href="gallery.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Gallery</a>
+                <a href="blog.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Blog</a>
+                <a href="careers.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Careers</a>
+                <a href="contact.html" class="block px-3 py-2 hover:bg-gray-50 rounded-md font-medium">Contact</a>
+                <a href="contact.html"
+                    class="block mt-4 w-full text-center bg-primary text-white px-6 py-3 rounded-full font-semibold">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32">
+        <!-- Hero Section -->
+        <section class="relative bg-primary py-32 overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="assets/12.jpg" alt="Hero Background"
+                    class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/95"></div>
+            </div>
+
+            <div class="container mx-auto px-6 lg:px-12 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-heading font-black text-white mb-6 tracking-tight">Our Specialized
+                    <span class="text-emerald">Expertise</span></h1>
+                <p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto">Providing high-end clinical hygiene and
+                    restoration services across commercial and domestic sectors.</p>
+            </div>
+        </section>
+
+        <!-- Services Zigzag Section -->
+        <div class="">
+
+            <!-- Service 1 -->
+            <section class="py-24 bg-white overflow-hidden">
+                <div class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2">
+                        <img src="assets/1.jpg"
+                            class="w-full rounded-[2.5rem] shadow-xl aspect-[4/3] object-cover"
+                            alt="Biohazard cleaning">
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-8">
+                        <h2 class="text-4xl md:text-5xl font-heading font-black tracking-tight leading-none">
+                            <span class="text-emerald block mb-2">Biohazard & Trauma</span>
+                            <span class="text-primary block">Cleaning</span>
+                        </h2>
+                        <h4 class="text-xl font-bold text-gray-900">Clinical precision for sensitive environments.</h4>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            Our technicians are certified in the removal of biohazardous materials and the restoration
+                            of trauma scenes. We handle every project with clinical precision and compassionate care,
+                            ensuring the environment is safe and hygienic.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center text-sm text-gray-600 font-medium">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></span> Crime Scene Restoration
+                                & Disinfection
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600 font-medium">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></span> Biohazard Waste
+                                Management & Disposal
+                            </li>
+                        </ul>
+                        <div class="pt-6">
+                            <a href="service-biohazard.html"
+                                class="inline-flex items-center justify-center bg-primary text-white font-black px-10 py-4 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300 group">
+                                Read More
+                                <i class="fas fa-arrow-right ml-3 text-sm transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service 2 (Reversed) -->
+            <section class="py-24 bg-gray-50 overflow-hidden">
+                <div class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row-reverse items-center gap-16">
+                    <div class="w-full lg:w-1/2">
+                        <img src="assets/4.jpg"
+                            class="w-full rounded-[2.5rem] shadow-xl aspect-[4/3] object-cover"
+                            alt="Domestic and commercial">
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-8">
+                        <h2 class="text-4xl md:text-5xl font-heading font-black tracking-tight leading-none">
+                            <span class="text-emerald block mb-2">Domestic & Commercial</span>
+                            <span class="text-primary block">Cleaning</span>
+                        </h2>
+                        <h4 class="text-xl font-bold text-gray-900">Eco-friendly excellence for homes and offices.</h4>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            Shades of Emerald Eco Limited provides professional cleaning services for schools, offices,
+                            hotels, and homes. We use sustainable ingredients safe for people and the planet, delivered
+                            by skilled technicians.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center text-sm text-gray-600 font-medium">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></span> High-End Residential
+                                Cleaning Rituals
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600 font-medium">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></span> Professional Corporate &
+                                Office Hygiene
+                            </li>
+                        </ul>
+                        <div class="pt-6">
+                            <a href="service-domestic-commercial.html"
+                                class="inline-flex items-center justify-center bg-primary text-white font-black px-10 py-4 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300 group">
+                                Read More
+                                <i class="fas fa-arrow-right ml-3 text-sm transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service 3 -->
+            <section class="py-24 bg-white overflow-hidden">
+                <div class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2">
+                        <img src="assets/2.jpg"
+                            class="w-full rounded-[2.5rem] shadow-xl aspect-[4/3] object-cover" alt="Infection control">
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-8">
+                        <h2 class="text-4xl md:text-5xl font-heading font-black tracking-tight leading-none">
+                            <span class="text-emerald block mb-2">Pathogen & Infection</span>
+                            <span class="text-primary block">Control</span>
+                        </h2>
+                        <h4 class="text-xl font-bold text-gray-900">Advanced sanitization for public health.</h4>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            Protecting communal environments through advanced sanitization protocols. We eliminate
+                            pathogens at the chemical source using our proprietary, non-toxic disinfectants designed for
+                            high-traffic areas.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center text-sm text-gray-600 font-medium">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></span> Viral & Bacterial
+                                Pathogen Elimination
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600 font-medium">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></span> High-Traffic
+                                Sanitization Audits
+                            </li>
+                        </ul>
+                        <div class="pt-6">
+                            <a href="service-infection-control.html"
+                                class="inline-flex items-center justify-center bg-primary text-white font-black px-10 py-4 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300 group">
+                                Read More
+                                <i class="fas fa-arrow-right ml-3 text-sm transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service 4 (Reversed) -->
+            <section class="py-24 bg-gray-50 overflow-hidden">
+                <div class="container mx-auto px-4 lg:px-12 flex flex-col lg:flex-row-reverse items-center gap-16">
+                    <div class="w-full lg:w-1/2">
+                        <img src="assets/13.jpg"
+                            class="w-full rounded-[2.5rem] shadow-xl aspect-[4/3] object-cover" alt="Eco-manufacturing">
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-8">
+                        <h2 class="text-4xl md:text-5xl font-heading font-black tracking-tight leading-none">
+                            <span class="text-emerald block mb-2">Eco-Friendly</span>
+                            <span class="text-primary block">Manufacturing</span>
+                        </h2>
+                        <h4 class="text-xl font-bold text-gray-900">Innovation in sustainable science.</h4>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            At our core, Shades of Emerald Eco Limited specializes in the manufacturing of high-quality
+                            cleaning solutions. Our products are formulated using sustainable ingredients that are safe
+                            for people and the planet.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center text-sm text-gray-600 font-medium">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></span> Proprietary Non-Toxic
+                                Formulations
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600 font-medium">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></span> Sustainable Ingredient
+                                Sourcing
+                            </li>
+                        </ul>
+                        <div class="pt-6">
+                            <a href="service-eco-manufacturing.html"
+                                class="inline-flex items-center justify-center bg-primary text-white font-black px-10 py-4 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300 group">
+                                Read More
+                                <i class="fas fa-arrow-right ml-3 text-sm transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service 5 -->
+            <section class="py-24 bg-white overflow-hidden">
+                <div class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2">
+                        <img src="assets/10.jpg"
+                            class="w-full rounded-[2.5rem] shadow-xl aspect-[4/3] object-cover"
+                            alt="Environmental restoration">
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-8">
+                        <h2 class="text-4xl md:text-5xl font-heading font-black tracking-tight leading-none">
+                            <span class="text-emerald block mb-2">Environmental & Structural</span>
+                            <span class="text-primary block">Restoration</span>
+                        </h2>
+                        <h4 class="text-xl font-bold text-gray-900">Reversing destruction through multi-phase
+                            restoration.</h4>
+                        <p class="text-gray-500 text-lg leading-relaxed">
+                            We specialize in reversing damage that seeps into walls and structural elements. Our
+                            technicians address structural integrity, air quality, and aesthetic recovery using advanced
+                            thermal fogging and neutralization technologies.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center text-sm text-gray-600 font-medium">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></span> Soot & Smoke Odour
+                                Neutralization
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600 font-medium">
+                                <span class="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></span> Thermal Imaging & Damage
+                                Assessment
+                            </li>
+                        </ul>
+                        <div class="pt-6">
+                            <a href="service-restoration.html"
+                                class="inline-flex items-center justify-center bg-primary text-white font-black px-10 py-4 rounded-full shadow-lg hover:bg-primary-dark transition-all duration-300 group">
+                                Read More
+                                <i class="fas fa-arrow-right ml-3 text-sm transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+ <footer class="bg-gray-900 text-white pt-16 pb-0">
+        <div class="container mx-auto px-4 lg:px-12 mb-12">
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-5">
+                        <img src="assets/logobio.jpeg" style="height:80px"/>
+                    </a>
+                    <p class="text-gray-400 text-base leading-relaxed mb-5">Top-notch eco-friendly cleaning services for
+                        homes and businesses. Quality, reliability, and care — every time.</p>
+                   <div class="flex space-x-3">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=61589912471893" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    
+    <!-- TikTok (Replaced Twitter) -->
+    <a href="https://www.tiktok.com/@user6169125055238?_r=1&_t=ZN-96XgiFCC4Qx" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-tiktok"></i>
+    </a>
+    
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/shadesofemerald.l" target="_blank" rel="noopener noreferrer"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-instagram"></i>
+    </a>
+    
+    <!-- Google Business Profile / GMB (Replaced LinkedIn) -->
+    <a href="#"
+        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-primary transition text-base">
+        <i class="fab fa-google"></i>
+    </a>
+</div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Quick links</h4>
+                    <ul class="space-y-3 text-base">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Home</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-400 hover:text-emerald transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>About Us</a></li>
+                        <li><a href="services.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Services</a></li>
+                        <li><a href="gallery.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Gallery</a></li>
+                        <li><a href="careers.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Careers</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Our services</h4>
+                    <ul class="space-y-3 text-base">
+                        <li><a href="service-biohazard.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Biohazard Cleaning</a></li>
+                        <li><a href="service-domestic-commercial.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Domestic & Commercial</a>
+                        </li>
+                        <li><a href="service-infection-control.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Infection Control</a></li>
+                        <li><a href="service-eco-manufacturing.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Eco-Manufacturing</a></li>
+                        <li><a href="service-restoration.html"
+                                class="text-gray-400 hover:text-accent transition flex items-center"><i
+                                    class="fas fa-chevron-right text-sm mr-2 text-white"></i>Structural Restoration</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-heading font-bold mb-5 border-b border-gray-800 pb-2">Contact info</h4>
+                    <ul class="space-y-4 text-base">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt text-white mt-1 mr-3"></i><span
+                                class="text-gray-400">7 Clent Road, Oldbury, West Midlands, B68 9EU</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt text-white mr-3"></i><span
+                                class="text-gray-400">07424233154</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope text-white mr-3"></i><span
+                                class="text-gray-400">chima.elendu28@gmail.com</span></li>
+                        <li class="flex items-center"><i class="fas fa-clock text-white mr-3"></i><span
+                                class="text-gray-400">Mon–Sat: 8:00 AM – 6:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 py-8 text-gray-500 text-base">
+            <div
+                class="container mx-auto px-4 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <p>&copy; 2026 Shades of Emerald Eco Limited. All Rights Reserved</p>
+                <p>Design and developed by <a href="https://kyleinfotech.co.in/" target="_blank"
+                        class="text-accent hover:text-white transition">Kyle Infotech</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
+
